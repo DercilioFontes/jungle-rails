@@ -1,0 +1,25 @@
+main section.admin-categories-index,
+main section.categories-show {
+
+  .categories {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       wrap;
+    justify-content: space-around;
+  }
+
+  th {
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  td {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+}
+
+
+
+
