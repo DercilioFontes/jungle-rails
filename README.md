@@ -29,6 +29,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## OBS
 
+## MailCatcher
+
+MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface.
+
 Bundler
 
 Please don't put mailcatcher into your Gemfile. It will conflict with your applications gems at some point.
