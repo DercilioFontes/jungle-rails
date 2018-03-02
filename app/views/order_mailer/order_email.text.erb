@@ -1,0 +1,26 @@
+Jungle e-Receipt - Order #<%= @order.id %>
+-----------------------------------------------------------------------
+Order Email: <%= @order.email %>
+=======================================================================
+
+Thank you for your order!
+
+<% @order.line_items.each do |line_item| %>
+  <% quantity = line_item.quantity.to_i %>
+  <% if product = Product.find_by(id: line_item.product_id) %>
+    <% item_total = product.price * line_item.quantity %>
+
+  -----------------------------------------------------------------------
+  
+  Product: <%= product.name %>
+          <%= product.description %>
+  
+  Unit Price: <%= product.price %> | Quantity: <%= quantity %> | 
+  Subtotal: <%= item_total %>
+  
+  ----------------------------------------------------------------------- 
+  
+  <% end %>
+<% end %>
+=======================================================================
+T0TAL: <%= @order.total %>

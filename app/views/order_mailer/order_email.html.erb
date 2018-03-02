@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <section class="orders-show">
+  
+  <header class="page-header">
+    <h1>Order #<%= @order.id %></h1>
+    <p><b>Order Email:</b> <%= @order.email %></p>
+  </header>
+
+  <div class="order-summary jumbotron">
+    <h4>Thank you for your order!</h4>
+  </div>
+  <%= link_to "Continue Shopping", root_url, class: 'btn btn-lg btn-primary' %>
+  
+  <div class="panel panel-default items" id="order-table">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.line_items.each do |line_item| %>
+          <%= render 'item', line_item: line_item %>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+            <%= @order.total %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+</section>
+  </body>
+</html>
