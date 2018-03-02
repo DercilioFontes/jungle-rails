@@ -26,3 +26,24 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## OBS
+
+Bundler
+
+Please don't put mailcatcher into your Gemfile. It will conflict with your applications gems at some point.
+
+Instead, pop a note in your README stating you use mailcatcher. Simply run `gem install mailcatcher` then `mailcatcher` to get started.
+
+More information <https://mailcatcher.me>
+
+AND
+
+I confirm that, on a Vagrant Ubuntu VM it works by :
+
+adding a port forwarding in Vagrantfile
+=> `config.vm.network :forwarded_port, guest: 1080, host: 1080`
+launching mailcatcher
+=> `mailcatcher --ip=0.0.0.0`
+
+More information <https://github.com/sj26/mailcatcher/issues/89>

@@ -9,18 +9,14 @@ Thank you for your order!
   <% quantity = line_item.quantity.to_i %>
   <% if product = Product.find_by(id: line_item.product_id) %>
     <% item_total = product.price * line_item.quantity %>
-
   -----------------------------------------------------------------------
   
   Product: <%= product.name %>
           <%= product.description %>
   
-  Unit Price: <%= product.price %> | Quantity: <%= quantity %> | 
-  Subtotal: <%= item_total %>
-  
-  ----------------------------------------------------------------------- 
-  
+  Unit Price: <%= product.price %> | Quantity: <%= quantity %> | Subtotal: <%= item_total %> 
   <% end %>
 <% end %>
+
 =======================================================================
 T0TAL: <%= @order.total %>
