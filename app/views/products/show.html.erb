@@ -36,7 +36,7 @@
             <% arr = Array.new(5) %>
             <% count =  review.rating %>
             <% for i in 0..5 %>
-            <% count - 1 > 0 ? arr[i] = true : arr[i] = false %>
+            <% count - 1 >= 0 ? arr[i] = true : arr[i] = false %>
             <% count -= 1  %>
             <% end %>
             <% star1 = arr[1] ? 'star' : 'star-o' %>
