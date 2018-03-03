@@ -26,6 +26,20 @@
       </div>
     </div>
 
+      <div class="row">
+        <h3>Reviews:</h3>
+      </div>
+      <% Review.where(product_id: @product.id).each do |review| %>
+        <div class="row">
+          <dl class="dl-horizontal">
+            <dt>Rating</dt>
+            <dd><%= review.rating %></dd>
+            <dt>Description</dt>
+            <dd><%= review.description %></dd>
+          </dl>
+        </div>
+      <% end %>
+   
   </article>
 
 </section>
