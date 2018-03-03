@@ -43,12 +43,42 @@ cat1.products.create!({
   price: 64.99
 })
 
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: 'Lorem ipsum dolor amet tacos tousled intelligentsia aesthetic banjo semiotics wolf ugh banh mi, street art hammock.',
+  rating: 3,
+})
+
+Review.create!({
+  product_id: 1,
+  user_id: 2,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 4,
+})
+
+
+
 cat1.products.create!({
   name:  'Women\'s Zebra pants',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
   quantity: 18,
   price: 124.99
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 2,
+  description: 'Lorem ipsum dolor amet tacos tousled intelligentsia aesthetic banjo semiotics wolf ugh banh mi, street art hammock.',
+  rating: 5,
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 1,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 2,
 })
 
 cat1.products.create!({
@@ -59,12 +89,40 @@ cat1.products.create!({
   price: 34.49
 })
 
+Review.create!({
+  product_id: 3,
+  user_id: 3,
+  description: 'Lorem ipsum dolor amet tacos tousled intelligentsia aesthetic banjo semiotics wolf ugh banh mi, street art hammock.',
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 3,
+  user_id: 4,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 3,
+})
+
 cat1.products.create!({
   name:  'Hipster Socks',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel4.jpg'),
   quantity: 8,
   price: 25.00
+})
+
+Review.create!({
+  product_id: 4,
+  user_id: 4,
+  description: 'Lorem ipsum dolor amet tacos tousled intelligentsia aesthetic banjo semiotics wolf ugh banh mi, street art hammock.',
+  rating: 2,
+})
+
+Review.create!({
+  product_id: 4,
+  user_id: 3,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 3,
 })
 
 cat1.products.create!({
@@ -75,12 +133,47 @@ cat1.products.create!({
   price: 1_225.00
 })
 
+Review.create!({
+  product_id: 5,
+  user_id: 4,
+  description: 'Lorem ipsum dolor amet tacos tousled intelligentsia aesthetic banjo semiotics wolf ugh banh mi, street art hammock.',
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 5,
+  user_id: 5,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 5,
+})
+
 cat1.products.create!({
   name:  'Human Feet Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
   quantity: 82,
   price: 224.50
+})
+
+Review.create!({
+  product_id: 6,
+  user_id: 4,
+  description: 'Lorem ipsum dolor amet tacos tousled intelligentsia aesthetic banjo semiotics wolf ugh banh mi, street art hammock.',
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 6,
+  user_id: 5,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 5,
+})
+
+Review.create!({
+  product_id: 6,
+  user_id: 1,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 3,
 })
 
 
@@ -92,12 +185,33 @@ cat2.products.create!({
   price: 164.49
 })
 
+Review.create!({
+  product_id: 7,
+  user_id: 2,
+  description: 'Lorem ipsum dolor amet tacos tousled intelligentsia aesthetic banjo semiotics wolf ugh banh mi, street art hammock.',
+  rating: 4,
+})
+
 cat2.products.create!({
   name:  'Hotdog Slicer',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics2.jpg'),
   quantity: 3,
   price: 26.00
+})
+
+Review.create!({
+  product_id: 7,
+  user_id: 3,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 1,
+})
+
+Review.create!({
+  product_id: 7,
+  user_id: 2,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 2,
 })
 
 cat2.products.create!({
@@ -114,6 +228,20 @@ cat3.products.create!({
   image: open_asset('furniture1.jpg'),
   quantity: 320,
   price: 3_052.00
+})
+
+Review.create!({
+  product_id: 9,
+  user_id: 6,
+  description: 'Pinterest tumeric pop-up adaptogen man bun raw denim. Kinfolk church-key organic master cleanse, street art tumblr wayfarers forage typewriter.',
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 9,
+  user_id: 4,
+  description: '',
+  rating: 3,
 })
 
 cat3.products.create!({
