@@ -33,7 +33,18 @@
         <div class="row">
           <dl class="dl-horizontal">
             <dt>Rating</dt>
-            <dd><%= review.rating %></dd>
+            <% arr = Array.new(5) %>
+            <% count =  review.rating %>
+            <% for i in 0..5 %>
+            <% count - 1 > 0 ? arr[i] = true : arr[i] = false %>
+            <% count -= 1  %>
+            <% end %>
+            <% star1 = arr[1] ? 'star' : 'star-o' %>
+            <% star2 = arr[2] ? 'star' : 'star-o' %>
+            <% star3 = arr[3] ? 'star' : 'star-o' %>
+            <% star4 = arr[4] ? 'star' : 'star-o' %>
+            <% star5 = arr[5] ? 'star' : 'star-o' %>
+            <dd><%= fa_icon star1 %> <%= fa_icon star2 %> <%= fa_icon star3 %> <%= fa_icon star4 %> <%= fa_icon star5 %></dd>
             <dt>Description</dt>
             <dd><%= review.description %></dd>
           </dl>
