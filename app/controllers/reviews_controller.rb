@@ -10,8 +10,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to :back
     else
-      ##### Checke if it's ok redirect to "/"
-      redirect_to "/"
+      render json: @review.errors, status: :bad_request
     end
     
   end
