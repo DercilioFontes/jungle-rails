@@ -6,8 +6,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Final Product
 
-![Showing products catalog view]()
-![Showing product and reviews view]()
+![Showing products catalog view](https://raw.githubusercontent.com/DercilioFontes/jungle-rails/master/docs/products_catalog.png)
+![Showing product and reviews view](https://raw.githubusercontent.com/DercilioFontes/jungle-rails/master/docs/product_and_reviews.png)
 
 ## Setup
 
@@ -47,7 +47,7 @@ Instead, pop a note in your README stating you use mailcatcher. Simply run `gem 
 
 More information <https://mailcatcher.me>
 
-#### AND
+#### And
 
 On a Vagrant Ubuntu VM it works by :
 
