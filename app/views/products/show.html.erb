@@ -22,6 +22,20 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+          <dt>Overall rating</dt>
+            <% rating_avg = Review.where(product_id: @product.id).average(:rating) %>
+            <% if rating_avg %> 
+              <% rating_avg_2_decimal = rating_avg.round(2) %>
+              <% count = rating_avg.round %>
+              <% arr = Array.new(5) %>
+              <% for i in 0..4 %>
+              <% count - 1 >= 0 ? arr[i] = 'star' : arr[i] = 'star-o' %>
+              <% count -= 1  %>
+              <% end %>
+              <dd><%= fa_icon arr[0] %> <%= fa_icon arr[1] %> <%= fa_icon arr[2] %> <%= fa_icon arr[3] %> <%= fa_icon arr[4] %> &nbsp; <%= fa_icon 'chevron-right' %> <%= rating_avg_2_decimal %></dd>
+            <% else %>
+              <dd>No rating yet</dd>
+            <% end%>
         </dl>
       </div>
     </div>
