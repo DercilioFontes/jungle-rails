@@ -8,6 +8,22 @@
   <p class="description">
     <%= product.description %>
   </p>
+
+  <div class="rating">
+    <p>Rating:&nbsp;
+    <% count = Review.where(product_id: product.id).average(:rating) %>
+    <% if count %> 
+      <% arr = Array.new(5) %>
+      <% for i in 0..4 %>
+      <% count - 1 >= 0 ? arr[i] = 'star' : arr[i] = 'star-o' %>
+      <% count -= 1  %>
+      <% end %>
+      <%= fa_icon arr[0] %> <%= fa_icon arr[1] %> <%= fa_icon arr[2] %> <%= fa_icon arr[3] %> <%= fa_icon arr[4] %></p>
+    <% else %>
+      No rating yet</p>
+    <% end%>
+  </div>
+
   <footer class="actions">
     <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>
       <%= fa_icon "shopping-cart", text: 'Add' %>
@@ -26,4 +42,5 @@
     SOLD OUT!
   </aside>
   <% end %>
+
 </article>
