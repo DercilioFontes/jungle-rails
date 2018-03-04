@@ -39,7 +39,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface.
 
-*Bundler
+#### Bundler
 
 Please don't put mailcatcher into your Gemfile. It will conflict with your applications gems at some point.
 
@@ -47,7 +47,7 @@ Instead, pop a note in your README stating you use mailcatcher. Simply run `gem 
 
 More information <https://mailcatcher.me>
 
-*AND
+#### AND
 
 On a Vagrant Ubuntu VM it works by :
 
