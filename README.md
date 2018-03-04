@@ -1,4 +1,4 @@
-# Porject Jungle on Rails
+# Project Jungle on Rails
 
 ## Lighthouse Labs (Vancouver - BC)
 
