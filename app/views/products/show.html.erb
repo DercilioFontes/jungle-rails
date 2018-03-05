@@ -74,18 +74,20 @@
         <dl class="dl-horizontal">
           <dt>Rating</dt>
           <dd>
-          <% Array.new(review.rating, 'star').concat(Array.new(5 - review.rating, 'star-o')).each do |s| %>
-            <%= fa_icon s %>
-          <% end %>
+            <% (1..5).each do |x| %>
+            <%= fa_icon (x <= review.rating) ? 'star' : 'star-o' %>
+            <% end %>
           </dd>
           <dt>Description</dt>
           <dd><%= review.description %></dd>
           <dt>Created on</dt>
           <dd><%= review.created_at.strftime("%m/%d/%Y-%I:%M%p")  %></dd>
-          <% if review.user_id == current_user.id %>
-          <dt class="tooltip">
-           <dd><%= link_to fa_icon('trash 2x'), "/products/#{@product.id}/reviews/#{review.id}", method: :delete %><dd>
-          </dt>
+          <% if current_user %>
+            <% if review.user_id == current_user.id %>
+              <dt class="tooltip">
+              <dd><%= link_to fa_icon('trash 2x'), "/products/#{@product.id}/reviews/#{review.id}", method: :delete %><dd>
+              </dt>
+            <% end %>
           <% end %>
         </dl>
       </div>
