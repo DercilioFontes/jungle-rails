@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
+  describe "Validations" do
   
   it "must not be created with different password and password_corfimation" do
     @user = User.create(first_name: 'Sylvia', last_name: 'Almeida', email: 'sylvia@gmail.com', password: 'KkKk', password_confirmation: 'KtKk')
@@ -39,4 +41,11 @@ RSpec.describe User, type: :model do
     expect(@user.errors.full_messages()).to eq ["Email can't be blank"]
   end
 
+  it "must not be created with a password with less than minimum length" do 
+    @user = User.create(first_name: 'Sylvia', last_name: 'Almeida', email: 'sylvia@gmail.com', password: 'KkK', password_confirmation: 'KkK')
+
+    expect(@user.errors.full_messages()).to eq ["Password is too short (minimum is 4 characters)", "Password confirmation is too short (minimum is 4 characters)"]
+  end
+
+  end 
 end
